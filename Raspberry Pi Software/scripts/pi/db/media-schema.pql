@@ -1,0 +1,44 @@
+-- Drop existing tables with dependencies
+DROP TABLE IF EXISTS people_fingerprints CASCADE;
+DROP TABLE IF EXISTS fingerprints CASCADE;
+DROP TABLE IF EXISTS media_people CASCADE;
+DROP TABLE IF EXISTS media CASCADE;
+DROP TABLE IF EXISTS people CASCADE;
+
+-- Create people table
+CREATE TABLE people (
+    id SERIAL PRIMARY KEY,
+    name TEXT UNIQUE
+);
+
+-- Create fingerprints table
+CREATE TABLE fingerprints (
+    id INTEGER PRIMARY KEY
+);
+
+-- Create relationship table between people and fingerprints
+CREATE TABLE people_fingerprints (
+    person_id INTEGER REFERENCES people(id),
+    fingerprint_id INTEGER REFERENCES fingerprints(id),
+    PRIMARY KEY (person_id, fingerprint_id)
+);
+
+-- Create media table
+CREATE TABLE media (
+    id SERIAL PRIMARY KEY,
+    date_taken DATE,
+    description TEXT,
+    image_url TEXT,
+    image_path TEXT,
+    black_image_path TEXT,
+    red_image_path TEXT,
+    black_image_md5 TEXT UNIQUE,
+    red_image_md5 TEXT UNIQUE
+);
+
+-- Create relationship table between media and people
+CREATE TABLE media_people (
+    media_id INTEGER REFERENCES media(id),
+    person_id INTEGER REFERENCES people(id),
+    PRIMARY KEY (media_id, person_id)
+);

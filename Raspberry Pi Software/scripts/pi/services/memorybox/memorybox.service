@@ -1,0 +1,39 @@
+[Unit]
+Description=Memory Box Service
+After=network.target postgresql.service
+
+# Placeholders for additional functionality
+# Requires=
+# Wants=
+# Conflicts=
+# Before=
+# Documentation=
+
+[Service]
+ExecStart=/usr/bin/env python3 /home/mikebuss/services/memorybox/memorybox.py
+
+# Restart options: no, on-success, on-failure, on-abnormal, on-abort, always
+Restart=on-failure
+
+# User and group the service will run as
+User=mikebuss
+Group=mikebuss
+
+# Placeholders for additional functionality
+# EnvironmentFile=
+# ExecStartPre=
+# ExecStartPost=
+# ExecStop=
+# ExecStopPost=
+# Type=simple
+# RemainAfterExit=no
+# RestartSec=5
+# TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
+
+# Placeholders for additional functionality
+# Alias=
+# RequiredBy=
+# Also=

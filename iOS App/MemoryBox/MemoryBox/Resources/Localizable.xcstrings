@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add Item" : {
+
+    },
+    "Item at %@" : {
+
+    },
+    "Memory Description" : {
+
+    },
+    "MemoryBox" : {
+
+    },
+    "Select an item" : {
+
+    },
+    "Select Photos" : {
+
+    },
+    "The image could not be processed from the Photos app." : {
+
+    },
+    "The image could not be resized." : {
+
+    },
+    "Upload" : {
+
+    },
+    "Uploaded!" : {
+
+    }
+  },
+  "version" : "1.0"
+}
