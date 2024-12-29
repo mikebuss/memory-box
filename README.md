@@ -22,6 +22,10 @@ A digital keepsake box with an e-paper display that shows memories throughout th
 
 For build instructions, technical details, and more information about this project, check out [the blog post](https://www.mikebuss.com/posts/memory-box).
 
+### iOS Application
+
+An example of the iOS application is available in the `iOS` folder. This is NOT a complete implementation, but it demonstrates the basic functionality.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
