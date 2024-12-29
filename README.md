@@ -8,6 +8,8 @@ A digital keepsake box with an e-paper display that shows memories throughout th
 - Custom iPhone app for uploading and managing photos
 - PostgreSQL database for storing photo metadata and tags on the Raspberry Pi
 
+---
+
 <img src="Images/1.png" alt="Memory Box" width="600"/>
 <img src="Images/2.png" alt="Memory Box" width="600"/>
 <img src="Images/3.png" alt="Memory Box" width="600"/>
